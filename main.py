@@ -1,4 +1,4 @@
-def get_num_words(text):
+def get_num_words(text: str):
     words = text.split()
     return len(words)
 
@@ -12,7 +12,7 @@ def get_num_per_char(text):
     count_dict = {}
     lowercase_text = text.lower()
     for char in lowercase_text:
-        if char not in count_dict:
+        if char not in count_dict.keys():
             count_dict[char] = 1
         else:
             count_dict[char] += 1
